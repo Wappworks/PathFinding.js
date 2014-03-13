@@ -161,7 +161,7 @@ IDAStarFinder.prototype.findPath = function(startX, startY, endX, endY, grid) {
 
         // Route not possible, or not found in time limit.
         if(t === Infinity) {
-            return [];
+            break;
         }
 
         // If t is a node, it's also the end node. Route is now
@@ -176,7 +176,6 @@ IDAStarFinder.prototype.findPath = function(startX, startY, endX, endY, grid) {
         cutOff = t;
     }
 
-    // This _should_ never to be reached.
     return [];
 };
 
